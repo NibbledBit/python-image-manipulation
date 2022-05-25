@@ -39,6 +39,10 @@ def main():
     base_dir = "./assets/"
     output_folder = "./output/"
 
+    # Create directory if not exists
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     # Delete directory contents before starting
     for filename in os.listdir(output_folder):
         file_path = os.path.join(output_folder, filename)
